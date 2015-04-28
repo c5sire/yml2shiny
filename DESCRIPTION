@@ -9,6 +9,8 @@ Authors@R: as.person(c(
   ))
 Maintainer: Who to complain to <yourfault@somewhere.net>
 Description: A thorough description.
+Depends: R (>= 3.1.2)
+Imports: brew
 License: MIT + file LICENSE
 LazyData: TRUE
 URL: http://github.com/c5sire/scrud

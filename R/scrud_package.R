@@ -1,5 +1,5 @@
 #' @name scrud-package
-#' @title A Good Title
-#' @description A thorough description.
+#' @title Shiny CRUD package
+#' @description A tool to create shiny user interface elements from a database schema file defined in yaml.
 #' @docType package
-NULL 
+NULL
