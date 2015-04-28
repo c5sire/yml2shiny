@@ -1,0 +1,18 @@
+Package: scrud
+Type: Package
+Title: A Good Title
+Version: 0.0.1.9000
+Date: 2015-04-28
+Authors@R: as.person(c(
+   "Reinard Simon <r.simon@cgiar.org> [aut, cre]",
+   "International Potato Center (CIP) [cph]"
+  ))
+Maintainer: Who to complain to <yourfault@somewhere.net>
+Description: A thorough description.
+License: MIT + file LICENSE
+LazyData: TRUE
+URL: http://github.com/c5sire/scrud
+BugReports: http://github.com/c5sire/scrud/issues
+Suggests: knitr,
+    testthat
+VignetteBuilder: knitr
