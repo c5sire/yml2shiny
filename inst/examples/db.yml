@@ -1,0 +1,50 @@
+---
+title: people
+name: A database of staff
+date: 2014-04-28
+author: Reinhard Simon
+database: sqlite
+ui: shiny
+---
+
+people:
+  columns:
+   id: integer
+   first_name: string
+   last_name: string
+   age: integer
+   birthday: date
+  checks:
+   age_1: age > 0
+   age_2: age < 120
+   last_name: Simon, Rossel, Berg
+  ui:
+   first_name: text
+   last_name: select
+   age: select
+   birthday: date
+  ll:
+   first_name:
+    en: First name
+    de: Vorname
+    es: nombre
+   last_name:
+    en: Last name
+    de: Familienname
+    es: apellido
+   age:
+    en: Age
+    de: Alter
+    es: edad
+   birthday:
+    en: Birthday
+    de: Geburtstag
+    es: cumpelanos
+adress:
+  columns:
+    id: integer
+    id_people: integer
+    type: string
+    city: string
+    country: string
+
