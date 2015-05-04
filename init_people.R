@@ -1,6 +1,8 @@
-init_people <- function(path){
-  if(is.null(path)) return(FALSE)
-  db <- RSQLite::dbConnect(RSQLite::SQLite(), path)
+init_people <- function(db_name){
+  if(is.null(db_name)) stop("Path is NULL.")
+
+
+  db <- RSQLite::dbConnect(RSQLite::SQLite(), db_name)
 
   if(!dbExistsTable(db, "people")){
     dbSendQuery(conn = db,
@@ -12,9 +14,10 @@ init_people <- function(path){
  age INTEGER,
  birthday TEXT
     )")
-    #dbDisconnect(db)
+
   }
 
 }
+
 
 

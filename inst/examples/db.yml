@@ -15,31 +15,31 @@ people:
    age: integer
    birthday: date
   checks:
-   age_1: age > 0
-   age_2: age < 120
+   age: age > 1 & age < 140
    last_name: Simon, Rossel, Berg
   ui:
    first_name: text
-   last_name: select
-   age: select
+   last_name: select; ('Simon', 'Rossel', 'Berg')
+   age: slider; min=1, max = 140, value = 20
    birthday: date
   ll:
    first_name:
-    en: First name
-    de: Vorname
-    es: nombre
+    en: 'First name'
+    de: 'Vorname'
+    es: 'nombre'
    last_name:
-    en: Last name
-    de: Familienname
-    es: apellido
+    en: 'Last name'
+    de: 'Familienname'
+    es: 'apellido'
    age:
-    en: Age
-    de: Alter
-    es: edad
+    en: 'Age'
+    de: 'Alter'
+    es: 'edad'
    birthday:
-    en: Birthday
-    de: Geburtstag
-    es: cumpelanos
+    en: 'Birthday'
+    de: 'Geburtstag'
+    es: 'cumpleanos'
+
 adress:
   columns:
     id: integer
@@ -47,4 +47,25 @@ adress:
     type: string
     city: string
     country: string
-
+  ll:
+    id_people:
+      en: 'Person'
+      de: 'Person'
+      es: 'Persona'
+    type:
+      en: 'Type of address'
+      de: 'Typ der Adresse'
+      es: 'Tipo de direccion'
+    city:
+      en: 'City'
+      de: 'Stadt'
+      es: 'Ciudad'
+    country:
+      en: 'Country'
+      de: 'Land'
+      es: 'Pais'
+  ui:
+    id_people: select; people_id = (last_name, firt_name, sep = ', ')
+    type: select; ('home', 'office')
+    city: text
+    country: text
